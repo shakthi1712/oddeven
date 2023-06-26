@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>even</title>
+    
+    
+    
+    
+    <style>
+
+*{
+            margin:0;
+        }
+        body{
+            background-color:rgb(19, 18, 32);
+        }
+        h1{
+            text-align: center;
+            margin-top: 1rem;
+            font-family: cursive;
+            font-weight:bolder;
+            border-bottom: 1px solid rgb(5, 237, 245);
+            color:rgb(5, 237, 245);
+            padding: 20px;
+        
+        }
+        label{
+            font-size: 30px;
+            font-family: cursive;
+            color: rgb(5, 237, 245);
+        }
+        .contodd{
+            
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content:flex-start;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap:10px;
+            padding: 40px;
+
+
+        }
+        #userNum{
+            height:20px;
+            padding: 20px;
+            border-radius: 20px;
+            font-size: 20px;
+            
+        }
+        button{
+            font-size: 30px;
+            padding:20px;
+            border-radius: 20px;
+            background-color: rgb(5, 237, 245);
+            background-color: rgb(5, 237, 245);
+        }
+        
+    </style>
+    
+</head>
+<body>
+
+    <h1>EVEN</h1>
+    <div class="contodd">
+        
+        
+        
+        <label for="number">ENTER YOUR NUMBER:</label>
+    <input type="number" id="userNum" ><br>
+    <button id="click" onclick="submit()">PLAY</button><br>
+    <span id="randomvalue"></span><br>
+    <span id="totallss"></span>
+    <span id="total"></span><br>
+    <span id="result"></span>
+    
+
+
+
+</div>
+
+    <script>
+function submit(){
+
+let usernum=document.getElementById("userNum");
+let result=document.getElementById("result");
+let totals=document.getElementById("total");
+let totallss=document.getElementById("totallss");
+
+let random=Math.floor((Math.random()*10)+1);
+randomvalue.innerHTML= random;
+let stotal=((usernum.valueAsNumber)+random);
+if(stotal % 2===0){
+    result.innerHTML= "you win the game";
+    totallss.innerHTML="TOTAL:"
+    result.style.fontSize="40px";
+    result.style.fontFamily="cursive";
+    result.style.color="rgb(5, 237, 245)";
+    randomvalue.style.fontSize="40px";
+    randomvalue.style.fontFamily="cursive";
+    randomvalue.style.color="rgb(5, 237, 245)";
+    totals.innerHTML=stotal;
+    totals.style.fontSize="40px";
+    totals.style.fontFamily="cursive";
+    totals.style.color="rgb(5, 237, 245)";
+    totallss.style.fontSize="40px";
+    totallss.style.fontFamily="cursive";
+    totallss.style.color="rgb(5, 237, 245)";
+
+
+
+
+   
+
+
+  }
+ else{
+    
+    result.innerHTML= "you loose the game";
+    result.style.fontSize="40px";
+    result.style.fontFamily="cursive";
+    result.style.color="rgb(5, 237, 245)";
+    randomvalue.style.fontSize="40px";
+    randomvalue.style.fontFamily="cursive";
+    randomvalue.style.color="rgb(5, 237, 245)";
+    totals.innerHTML=stotal;
+    totals.style.fontSize="40px";
+    totals.style.fontFamily="cursive";
+    totals.style.color="rgb(5, 237, 245)";
+    totallss.style.fontSize="40px";
+    totallss.style.fontFamily="cursive";
+    totallss.style.color="rgb(5, 237, 245)";
+    totallss.innerHTML="TOTAL:"
+
+
+
+}
+
+}
+
+
+
+
+
+
+    </script>
+</body>
+</html>
